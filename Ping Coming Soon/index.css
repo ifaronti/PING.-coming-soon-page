@@ -13,16 +13,6 @@
     src: url(fonts/LibreFranklin-ExtraLight.ttf);
 }
 
-@font-face {
-    font-family:'Libra Regular' ;
-    src: url(fonts/LibreFranklin-Regular.ttf);
-}
-
-@font-face {
-    font-family:'Libra Medium' ;
-    src: url(fonts/LibreFranklin-Medium.ttf);
-}
-
 body{
     display: flex;
     align-items: center;
