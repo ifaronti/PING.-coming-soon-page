@@ -81,7 +81,16 @@ h1, h2{
 .soon-bold{
     color: hsl(209, 33%, 12%);
     font-family: 'Libra bold';
-    letter-spacing: px;
+}
+
+@media only screen and (max-width: 700px){
+    .content{
+        width: 100%;
+    }
+
+    h1{
+        font-size: 1.8rem;
+    }
 }
 
 form{
@@ -115,6 +124,11 @@ button{
     font-size: 1rem;
     background-color: hsl(223, 87%, 63%);
     color: white;
+    box-shadow: 0 5px 5px 2px #dae2f5;
+}
+
+button:hover{
+    opacity: .7;
 }
 
 .error-message{
@@ -123,10 +137,40 @@ button{
     font-family: 'Libra Light';
     opacity: .7;
     position: absolute;
-    margin-top: 8px;
-    letter-spacing: .15px;
+    top: 21.5rem;
+    letter-spacing: .18px;
     text-indent: 2rem;
     display: none;
+}
+
+@media only screen and (max-width: 700px){
+    article{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 70vh ;
+    }
+
+    form{
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .email-input{
+        width: 21rem;
+    }
+
+    button{
+        width: 21rem;
+    }
+
+    .error-message{
+        position: relative;
+        top: -3.4rem;
+        left: -13px;
+        text-align: center;
+    }
 }
 
 .dashboard{
@@ -136,6 +180,20 @@ button{
     height: 390px;
     margin-top: 90px;
     margin-bottom: 90px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 450px){
+    .dashboard{
+        width: 90%;
+        height: 250px;
+    }
+}
+
+@media only screen and (min-width: 451px) and (max-width: 700px){
+    .dashboard{
+        width: 430px;
+        height: 350px;
+    }
 }
 
 footer{
@@ -167,16 +225,16 @@ footer{
 
 #facing-book:hover{
     background-color: #0165E1;
-    border: none;
+    border-color: rgb(255, 255, 255, 0);
 }
 
 #instagram:hover{
-    border: none;
+    border-color: rgb(255, 255, 255, 0);
     background-color: #0165E1;
 }
 
 #instagram:hover{
-    border: none;
+    border-color: rgb(255, 255, 255, 0);
     background-color: #17A9FD;
 }
 
@@ -186,7 +244,7 @@ footer{
 
 #twitter:hover{
     background-color: #1DA1F2;
-    border: none;
+    border-color: rgb(255, 255, 255, 0);
 }
 
 #twitter:hover #Dribbble-Light-Preview{
@@ -194,6 +252,8 @@ footer{
 }
 
 .copyright{
+    position: relative;
+    left: -1px;
     font-size: 12px;
     font-family: 'Libra Light';
     font-weight: 100;
