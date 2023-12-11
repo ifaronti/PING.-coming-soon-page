@@ -7,7 +7,71 @@
     <title>Ifa's Ping Coming Soon Solution</title>
 </head>
 <body>
+    <main class="content">
+        <header>
+            <img class="logo" src="./images/logo.svg" alt=" the word Ping. as comapny logo ">
+        </header>
+
+        <section>
+            <h1>We are launching <b class="soon-bold">soon!</b></h1>
+            <h2>Subscribe and get notified</h2>
+            <article>
+                <form id="theForm">
+                    <input class="email-input" type="text" placeholder="Your email address...">
+                    <button id="submitBtn">Notify Me</button>
+                </form>
+                <p class="error-message"></p>
+                <img class="dashboard" src="./images/illustration-dashboard.png" alt="dashboard showing activities graphs">
+            </article>
+        </section>
+
+        <footer>
+            <div class="social-icons">
+                <div class="facebook" id="facing-book">
+                    <svg fill="#0165E1" width="25px" height="25px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M26 20v-3c0-1.3.3-2 2.4-2H31v-5h-4c-5 0-7 3.3-7 7v3h-4v5h4v15h6V25h4.4l.6-5h-5z"></path></g></svg>
+                </div>
+    
+                <div class="facebook" id="twitter">
+                    <svg width="15px" height="15px" viewBox="0 -2 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#1DA1F2"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>twitter [#154]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-60.000000, -7521.000000)" fill="#1DA1F2"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M10.29,7377 C17.837,7377 21.965,7370.84365 21.965,7365.50546 C21.965,7365.33021 21.965,7365.15595 21.953,7364.98267 C22.756,7364.41163 23.449,7363.70276 24,7362.8915 C23.252,7363.21837 22.457,7363.433 21.644,7363.52751 C22.5,7363.02244 23.141,7362.2289 23.448,7361.2926 C22.642,7361.76321 21.761,7362.095 20.842,7362.27321 C19.288,7360.64674 16.689,7360.56798 15.036,7362.09796 C13.971,7363.08447 13.518,7364.55538 13.849,7365.95835 C10.55,7365.79492 7.476,7364.261 5.392,7361.73762 C4.303,7363.58363 4.86,7365.94457 6.663,7367.12996 C6.01,7367.11125 5.371,7366.93797 4.8,7366.62489 L4.8,7366.67608 C4.801,7368.5989 6.178,7370.2549 8.092,7370.63591 C7.488,7370.79836 6.854,7370.82199 6.24,7370.70483 C6.777,7372.35099 8.318,7373.47829 10.073,7373.51078 C8.62,7374.63513 6.825,7375.24554 4.977,7375.24358 C4.651,7375.24259 4.325,7375.22388 4,7375.18549 C5.877,7376.37088 8.06,7377 10.29,7376.99705" id="twitter-[#154]"> </path> </g> </g> </g> </g></svg>
+                </div>
+    
+                <div class="facebook" id="instagram">
+                    <svg fill="#17A9FD" id="insta" width="17px" height="17px" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M349.33 69.33a93.62 93.62 0 0193.34 93.34v186.66a93.62 93.62 0 01-93.34 93.34H162.67a93.62 93.62 0 01-93.34-93.34V162.67a93.62 93.62 0 0193.34-93.34h186.66m0-37.33H162.67C90.8 32 32 90.8 32 162.67v186.66C32 421.2 90.8 480 162.67 480h186.66C421.2 480 480 421.2 480 349.33V162.67C480 90.8 421.2 32 349.33 32z"/><path d="M377.33 162.67a28 28 0 1128-28 27.94 27.94 0 01-28 28zM256 181.33A74.67 74.67 0 11181.33 256 74.75 74.75 0 01256 181.33m0-37.33a112 112 0 10112 112 112 112 0 00-112-112z"/></svg>
+                </div>
+            </div>
+            <p class="copyright">© Copyright Ping. All rights       reserved
+                
+            </p>
+        </footer>
+
+    </main>
     
 </body>
-<script src="index.js"></script>
+    <script>
+        let emailInput = document.querySelector('.email-input')
+        let submitBtn = document.getElementById('submitBtn')
+        let theForm = document.getElementById('theForm')
+        let errorMSG = document.querySelector('.error-message')
+        let regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+        theForm.addEventListener('submit', function(e){
+            e.preventDefault()
+            if(emailInput.value.match(regex)){
+                window.location.reload()
+            }
+            else{
+                if(emailInput.value == ''){
+                    errorMSG.innerHTML = "Whoops! It looks like you forgot to add your email"
+                    errorMSG.style.display = 'block'
+                }
+                else{
+                    if(!emailInput.value.match(regex)){
+                        errorMSG.style.display = 'block'
+                        errorMSG.innerHTML = 'Please provide a valid email address'
+                    }
+                }
+            }
+
+        })
+    </script>
 </html>
