@@ -50,6 +50,7 @@ article{
     position: relative;
     left: -1px;
     top: 3.6rem;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 
 h1{
@@ -60,6 +61,7 @@ h1{
     font-weight: 100;
     letter-spacing: .8px;
     word-spacing: .6px;
+    animation: 2s ease-out 0s 1 slideInFromRight;
    
 }
 
@@ -69,6 +71,7 @@ h2{
     font-weight: 100;
     font-size: 1.2rem;
     letter-spacing: .5px;
+    animation: 2.5s ease-out 0s 1 slideInFromLeft;
 }
 
 h1, h2{
@@ -80,6 +83,24 @@ h1, h2{
     color: hsl(209, 33%, 12%);
     font-family: 'Libra bold';
 }
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
 
 @media only screen and (max-width: 700px){
     .content{
@@ -167,6 +188,8 @@ button:hover{
 
     button{
         width: 21rem;
+        font-family: 'Libra Light';
+        font-weight: 500;
     }
 
     .error-message{
