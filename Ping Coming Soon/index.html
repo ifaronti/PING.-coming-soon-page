@@ -21,8 +21,8 @@
                     <button id="submitBtn">Notify Me</button>
                 </form>
                 <p class="error-message"></p>
-                <img class="dashboard" src="./images/illustration-dashboard.png" alt="dashboard showing activities graphs">
             </article>
+            <img class="dashboard" src="./images/illustration-dashboard.png" alt="dashboard showing activities graphs">
         </section>
 
         <footer>
@@ -53,23 +53,31 @@
         let theForm = document.getElementById('theForm')
         let errorMSG = document.querySelector('.error-message')
         let regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        let mql = window.matchMedia("(max-width: 700px)")
 
-        theForm.addEventListener('submit', function(e){
+        submitBtn.addEventListener('click', function(e){
             e.preventDefault()
             if(emailInput.value.match(regex)){
                 window.location.reload()
+                emailInput.value = ''
             }
             else{
                 if(emailInput.value == ''){
                     errorMSG.innerHTML = "Whoops! It looks like you forgot to add your email"
                     errorMSG.style.display = 'block'
+                    emailInput.style.bordercolor ='hsl(354, 100%, 66%)'
                 }
                 else{
                     if(!emailInput.value.match(regex)){
                         errorMSG.style.display = 'block'
                         errorMSG.innerHTML = 'Please provide a valid email address'
+                        emailInput.style.bordercolor = 'hsl(354, 100%, 66%)'
                     }
                 }
+            }
+
+            if(errorMSG.style.display =='block' && mql.matches){
+                theForm.style.gap = '3rem'
             }
 
         })
