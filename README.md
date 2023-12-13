@@ -44,7 +44,7 @@ I used HTML/CSS my JS codes were written in my HTML file. The process leading up
 - Vanilla Javascript
 
 ### What I learned
-margin and flexbox/grid's gap properties are not to be used unless margin for x-axis and row gap for y-axis. otherwise, if you have a design image you are trying to align your CSS with, that practice will batter your time and leave you with a serious burnout unless of course you know exactly the units' values.
+margin and flexbox/grid's gap properties are not to be used together unless margin for x-axis and row gap for y-axis. otherwise, if you have a design image (not figma file) you are trying to align your CSS with, that practice will batter your time and leave you with a serious burnout unless of course you know the exact the units' values.
 
 
 ### Continued development
@@ -53,7 +53,7 @@ To continue building on my CSS's highly motivated improvement. Also to keep gett
 
 ### Useful resources
 
-- [perfect pixel](FireFox Extension) - This helped align my contents close to the design image provided with its design image overlay on my output helping me align my contents accordingly.
+- [perfect pixel](FireFox Extension) - This helped align my contents close to the design image provided with its design image overlay on my output helping me put my contents accordingly.
 
 ## Author
 
