@@ -8,13 +8,6 @@ This is a solution to the [Ping coming soon page challenge on Frontend Mentor](h
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -31,34 +24,10 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github](https://github.com/ifaronti/PING.-coming-soon-page)
 - Live Site URL: [Netlify](https://ifas-coming-soon-page.netlify.app/)
-
-## My process
-I used HTML/CSS my JS codes were written in my HTML file. The process leading upto this was just for me to know I'm going to use flexbox to center everything, use gap a little then use position a little to put everything together, according to the design image.
 
 ### Built with
 
 - Semantic HTML5 markup
 - Flexbox
 - Vanilla Javascript
-
-### What I learned
-margin and flexbox/grid's gap properties are not to be used together unless margin for x-axis and row gap for y-axis. otherwise, if you have a design image (not figma file) you are trying to align your CSS with, that practice will batter your time and leave you with a serious burnout unless of course you know the exact the units' values.
-
-
-### Continued development
-To continue building on my CSS's highly motivated improvement. Also to keep getting better with CSS.
-
-
-### Useful resources
-
-- [perfect pixel](FireFox Extension) - This helped align my contents close to the design image provided with its design image overlay on my output helping me put my contents accordingly.
-
-## Author
-
-- Frontend Mentor - [@ifaronti](https://www.frontendmentor.io/profile/ifaronti)
-
-## Acknowledgments
-
-Thanks to the folks at frontendmentor.io for this simple but practice worthy design and challenge! Thanks guys!
